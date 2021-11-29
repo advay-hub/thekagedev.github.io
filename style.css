@@ -2,8 +2,14 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: "Jetbrains Mono";
+    src: url(fonts/JetBrainsMono-Regular.ttf);
+    src: url(fonts/JetBrainsMono-Regular.woff2);
+}
+
 :root {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Jetbrains Mono', monospace;
     font-size: 16px;
 }
 
@@ -59,7 +65,7 @@ body {
     margin: 5rem;
     padding: 1rem;
     border: 0px solid;
-    border-radius: 16px;;
+    border-radius: 1rem;;
     width: 35rem;
     height: fit-content;
     background-color: #1a1a1a;
@@ -115,4 +121,16 @@ body {
 
 .icons {
     margin: 1rem;
+}
+
+@media (orientation: portrait), (max-width: 720px) {
+    :root {
+        font-size: 10px;
+    }
+}
+
+@media (orientation: landscape), (min-width: 720px) {
+    :root {
+        font-size: 16px;
+    }
 }
